@@ -5,7 +5,7 @@
     "start:heroku": "node dist/server",
     "postinstall": "npm run build:ssr",
     "ng": "ng",
-    "start": "npm run serve:ssr",
+    "start": "node dist/server",
     "build": "npm run build:ssr",
     "test": "ng test",
     "lint": "ng lint",
@@ -14,6 +14,10 @@
     "serve:ssr": "node dist/got-prerender-demo/server/main.js",
     "build:ssr": "ng build --prod && ng run got-prerender-demo:server:production",
     "prerender": "ng run got-prerender-demo:prerender"
+  },
+  "engines": {
+    "node": "12.14.1",
+    "npm": "6.14.7"
   },
   "private": true,
   "dependencies": {
